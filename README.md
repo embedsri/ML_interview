@@ -1,2 +1,2 @@
-# ML_interview
+# MolecLight_interview
 Interview code
