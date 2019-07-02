@@ -1,12 +1,13 @@
-__author__ = "Sriram Chadalavada"
-__copyright__ = "Copyright 2019, The Cogent Project"
-__credits__ = ["Sriram Chadalavada", "Steven Meyer"]
-__license__ = "Moleculight all rights reserved"
-__version__ = "0.2"
-__maintainer__ = "Steven Meyer"
-__email__ = "sriram.chadalavada@mindleap.ca"
-__status__ = "Prototype"
 #!/usr/bin/env python3
+#__author__ = "Sriram Chadalavada"
+#__copyright__ = "Copyright 2019, The Cogent Project"
+#__credits__ = ["Sriram Chadalavada", "Steven Meyer"]
+#__license__ = "Moleculight all rights reserved"
+#__version__ = "0.2"
+#__maintainer__ = "Steven Meyer"
+#__email__ = "sriram.chadalavada@mindleap.ca"
+#__status__ = "Prototype"
+
 
 # import the necessary packages
 import numpy as np
@@ -71,17 +72,16 @@ circles = cv.HoughCircles(gray, cv.HOUGH_GRADIENT,1, 20,param1=50, param2=30,min
 print ("Detected circles in the thresholded image")
 #
 # # ensure at least some circles were found
-# if circles is not None:
+if circles is not None:
 # 	# convert the (x, y) coordinates and radius of the circles to integers
-circles = np.round(circles[0, :]).astype("int")
+     circles = np.round(circles[0, :]).astype("int")
 #
 # 	# loop over the (x, y) coordinates and radius of the circles
-for (x, y, r) in circles:
+     for (x, y, r) in circles:
 # 		# draw the circle in the output image, then draw a rectangle
 # 		# corresponding to the center of the circle
-#        cv.circle(output, (x, y), r, (0, 255, 0), -1)
+#        cv.circle	(output, (x, y), r, (0, 255, 0), -1)
         cv.circle(output,(x,y),r,(255,153,255),-1)
-print ("Pink circles drawn")
 #
 # 	# show the output image
 
